@@ -1,9 +1,32 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "~/layouts/BaseLayout.astro";
+import Button from "~/components/Button.astro";
+import Card from "~/components/Card.astro";
+
+// NOTE: Get the 3 published articles with the most recent first
+const articles = (await getCollection("articles"))
+  .filter((article) => article.data.draft !== true)
+  .sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf())
+  .slice(0, 4);
 ---
 
 <BaseLayout title="Home">
-  <div class="min-h-[120vh]">
-    <h1 class="text-red-400">Home</h1>
-  </div>
+  <article>
+    <div class="px-5 py-10 max-w-2xl mx-auto">
+      <h1 class="font-h1-sp lg:font-h1-pc font-mono">🎉 Hello there</h1>
+      <p class="font-body-lg mb-6 font-mono">
+        I'm a software engineer specializing in building web applications and APIs(Rest, GraphQL).
+        My philosophy is to build simple, scalable, and maintainable software.
+      </p>
+      <p class="font-body-lg mb-6 font-mono">Btw, I use Arch Linux and Vim.</p>
+      <Button href="/about">More about me</Button>
+    </div>
+    <div class="px-5 max-w-2xl mx-auto">
+      <h2 class="font-h2-sp lg:font-h2-pc border-l-8 border-l-primary pl-4 font-mono">Articles</h2>
+      <div class="grid lg:grid-cols-2 gap-4">
+        {articles.map((article) => <Card {...article} />)}
+      </div>
+    </div>
+  </article>
 </BaseLayout>

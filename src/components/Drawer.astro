@@ -1,0 +1,50 @@
+---
+import HomeIcon from "~/assets/icons/HomeIcon.astro";
+import PersonIcon from "~/assets/icons/PersonIcon.astro";
+import NewsIcon from "~/assets/icons/NewsIcon.astro";
+import MailIcon from "~/assets/icons/MailIcon.astro";
+---
+
+<aside id="drawer" class="fixed pt-16 bg-base-100 h-screen z-40 shadow-lg shadow-base-200">
+  <div class="pt-8">
+    <nav>
+      <ul>
+        <li>
+          <a href="/" class="btn btn-ghost w-full rounded-none justify-start">
+            <HomeIcon />
+            <p>Home</p>
+          </a>
+        </li>
+        <li>
+          <a href="/about" class="btn btn-ghost w-full rounded-none justify-start">
+            <PersonIcon />
+            <p>About</p>
+          </a>
+        </li>
+        <li>
+          <a href="/articles" class="btn btn-ghost w-full rounded-none justify-start">
+            <NewsIcon />
+            <p>Articles</p>
+          </a>
+        </li>
+        <li>
+          <a href="/contact" class="btn btn-ghost w-full rounded-none justify-start">
+            <MailIcon />
+            <p>Contact</p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+<style>
+  #drawer {
+    width: 256px;
+    transform: translateX(-110%);
+    transition: transform 0.15s ease-in-out;
+  }
+  #drawer.open {
+    transform: translateX(0);
+  }
+</style>

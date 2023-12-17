@@ -2,7 +2,7 @@
 const config = {
   semi: true,
   printWidth: 100,
-  plugins: ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+  plugins: ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
 };
 
 export default config;

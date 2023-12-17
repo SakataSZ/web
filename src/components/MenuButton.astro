@@ -1,0 +1,23 @@
+---
+import MenuIcon from "~/assets/icons/MenuIcon.astro";
+import CloseIcon from "~/assets/icons/CloseIcon.astro";
+---
+
+<button
+  id="menu-btn"
+  class="group btn btn-ghost h-12 w-12 gap-0 flex flex-col justify-center items-center p-0"
+>
+  <span class="block group-[.open]:hidden"><MenuIcon /></span>
+  <span class="hidden group-[.open]:block"><CloseIcon /></span>
+  <p class="text-[12px]">menu</p>
+</button>
+
+<script>
+  const button = document.querySelector<HTMLInputElement>("#menu-btn")!;
+  const drawer = document.querySelector("#drawer")!;
+
+  button.addEventListener("click", () => {
+    button.classList.toggle("open");
+    drawer.classList.toggle("open");
+  });
+</script>

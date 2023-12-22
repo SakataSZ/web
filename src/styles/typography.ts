@@ -68,16 +68,19 @@ const heading: HeadingClassNames = {
     ...title[".font-title-lg-pc"]!,
     "margin-top": "64px",
     "margin-bottom": "24px",
+    "font-family": "monospace",
   },
   ".font-h2-pc": {
     ...title[".font-title-md-pc"]!,
     "margin-top": "64px",
     "margin-bottom": "24px",
+    "font-family": "monospace",
   },
   ".font-h3-pc": {
     ...title[".font-title-sm-pc"]!,
     "margin-top": "40px",
     "margin-bottom": "24px",
+    "font-family": "monospace",
   },
   ".font-h4-pc": {
     ...title[".font-title-xs-pc"]!,
@@ -93,16 +96,19 @@ const heading: HeadingClassNames = {
     ...title[".font-title-lg-sp"]!,
     "margin-top": "64px",
     "margin-bottom": "24px",
+    "font-family": "monospace",
   },
   ".font-h2-sp": {
     ...title[".font-title-md-sp"]!,
     "margin-top": "64px",
     "margin-bottom": "24px",
+    "font-family": "monospace",
   },
   ".font-h3-sp": {
     ...title[".font-title-sm-sp"]!,
     "margin-top": "40px",
     "margin-bottom": "24px",
+    "font-family": "monospace",
   },
   ".font-h4-sp": {
     ...title[".font-title-xs-sp"]!,

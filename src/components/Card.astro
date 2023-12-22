@@ -1,6 +1,7 @@
 ---
 import type { CollectionEntry } from "astro:content";
 import * as fns from "date-fns";
+import BadgeGroup from "~/components/BadgeGroup.astro";
 
 type Props = CollectionEntry<"articles">;
 
@@ -16,9 +17,7 @@ const link = `/${collection}/${slug}`;
   <div class="px-5 py-8 flex flex-col gap-4 bg-base-200 rounded-xl hover:drop-shadow-lg h-full">
     <span class="text-xs">{createdAt} - {updatedAt}</span>
     <h3 class="font-title-xs-sp">{title}</h3>
-    <div class="flex gap-2 flex-wrap">
-      {category.map((c) => <span class="badge badge-secondary badge-outline p-3">{c}</span>)}
-    </div>
+    <BadgeGroup categories={category} />
     <p class="font-body-md">{description}</p>
   </div>
 </a>

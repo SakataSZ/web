@@ -13,7 +13,7 @@ export default defineConfig({
       theme: "rose-pine",
     },
   },
-  output: "server",
+  output: "hybrid",
   adapter: vercel({
     webAnalytics: true,
   }),

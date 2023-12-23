@@ -14,13 +14,13 @@ const categories = articles.reduce((acc: string[], article) => {
 ---
 
 <BaseLayout title="Articles">
-  <div class="px-5 py-10 max-w-2xl: lg:max-w-6xl mx-auto">
-    <h1 class="font-h1-sp lg:font-h1-pc">📄 All Articles</h1>
+  <article class="px-5 py-10 max-w-2xl mx-auto">
+    <h1 class="font-h1-sp lg:font-h1-pc">📰 All Articles</h1>
     <h2 class="font-h2-sp lg:font-h2-pc border-l-8 border-l-primary pl-4">Categories</h2>
     <BadgeGroup categories={categories} />
     <h2 class="font-h2-sp lg:font-h2-pc border-l-8 border-l-primary pl-4">Articles</h2>
-    <div class="grid lg:grid-cols-3 gap-4">
+    <div class="grid gap-4">
       {articles.map((article) => <Card {...article} />)}
     </div>
-  </div>
+  </article>
 </BaseLayout>

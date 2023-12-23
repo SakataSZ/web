@@ -1,0 +1,45 @@
+<div>
+  <slot />
+</div>
+
+<style>
+  div :global(h2) {
+    @apply font-h2-sp lg:font-h2-pc;
+  }
+  div :global(h3) {
+    @apply font-h3-sp lg:font-h3-pc;
+  }
+  div :global(h4) {
+    @apply font-h4-sp lg:font-h4-pc;
+  }
+
+  div :global(blockquote) {
+    @apply font-body-md;
+    @apply border-l-4 border-primary pl-4;
+  }
+
+  div :global(p) {
+    @apply mt-5 font-body-md;
+  }
+
+  div :global(ul) {
+    @apply mt-5 list-disc;
+  }
+  div :global(li ul) {
+    @apply mt-0;
+  }
+  div :global(li:has(ul)) {
+    @apply mt-2;
+  }
+  div :global(li) {
+    @apply ml-5;
+  }
+
+  div :global(pre) {
+    @apply mt-5 rounded-md p-4 text-xs;
+  }
+
+  div :global(p img) {
+    @apply w-full;
+  }
+</style>

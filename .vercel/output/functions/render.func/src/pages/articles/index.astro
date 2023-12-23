@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import Card from "~/components/Card.astro";
+import BadgeGroup from "~/components/BadgeGroup.astro";
+
+const articles = (await getCollection("articles"))
+  .filter((article) => article.data.draft !== true)
+  .sort((a, b) => b.data.createdAt.valueOf() - a.data.createdAt.valueOf());
+
+const categories = articles.reduce((acc: string[], article) => {
+  return [...new Set([...acc, ...article.data.category])];
+}, []);
+---
+
+<BaseLayout title="Articles">
+  <article class="px-5 py-10 max-w-2xl mx-auto">
+    <h1 class="font-h1-sp lg:font-h1-pc">📰 All Articles</h1>
+    <h2 class="font-h2-sp lg:font-h2-pc border-l-8 border-l-primary pl-4">Categories</h2>
+    <BadgeGroup categories={categories} />
+    <h2 class="font-h2-sp lg:font-h2-pc border-l-8 border-l-primary pl-4">Articles</h2>
+    <div class="grid gap-4">
+      {articles.map((article) => <Card {...article} />)}
+    </div>
+  </article>
+</BaseLayout>

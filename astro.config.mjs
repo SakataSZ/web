@@ -7,4 +7,7 @@ export default defineConfig({
     host: "0.0.0.0",
   },
   integrations: [tailwind()],
+  markdown: {
+    shikiConfig: { theme: "rose-pine" },
+  },
 });

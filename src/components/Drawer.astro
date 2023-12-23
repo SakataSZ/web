@@ -3,10 +3,12 @@ import HomeIcon from "~/assets/icons/HomeIcon.astro";
 import PersonIcon from "~/assets/icons/PersonIcon.astro";
 import NewsIcon from "~/assets/icons/NewsIcon.astro";
 import MailIcon from "~/assets/icons/MailIcon.astro";
+import GithubIcon from "~/assets/icons/GithubIcon.astro";
+import TwitterIcon from "~/assets/icons/TwitterIcon.astro";
 ---
 
 <aside id="drawer" class="fixed pt-16 bg-base-100 h-screen z-40 shadow-lg shadow-base-200">
-  <div class="pt-8">
+  <div class="flex flex-col h-full pt-8">
     <nav>
       <ul>
         <li>
@@ -35,6 +37,14 @@ import MailIcon from "~/assets/icons/MailIcon.astro";
         </li>
       </ul>
     </nav>
+    <div class="mt-auto flex border-t border-neutral h-16 items-center">
+      <a href="https://twitter.com/SakataSZ" aria-label="SakataSZ's GitHub" class="btn btn-ghost"
+        ><GithubIcon /></a
+      >
+      <a href="https://github.com/SakataSZ" aria-label="SakataSZ's Twitter" class="btn btn-ghost"
+        ><TwitterIcon /></a
+      >
+    </div>
   </div>
 </aside>
 

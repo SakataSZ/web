@@ -1,0 +1,25 @@
+---
+import BaseLayout from "~/layouts/BaseLayout.astro";
+import TwitterIcon from "~/assets/icons/TwitterIcon.astro";
+import GithubIcon from "~/assets/icons/GithubIcon.astro";
+---
+
+<BaseLayout title="Contact">
+  <article class="px-5 py-10 max-w-2xl w-full mx-auto">
+    <h1 class="font-h1-sp lg:font-h1-pc font-mono">👋 Contact</h1>
+    <p class="font-body-lg">
+      I'm always happy to chat about anything, so feel free to reach out to me on any of the
+      following platforms:
+    </p>
+    <div class="py-8 flex gap-4 w-fit">
+      <a href="https://twitter.com/SakataSZ" class="btn btn-outline">
+        <TwitterIcon class="w-6 h-6 mr-2" />
+        <span class="font-mono">Twitter</span>
+      </a>
+      <a href="https://github.com/SakataSZ" class="btn btn-outline">
+        <GithubIcon class="w-6 h-6 mr-2" />
+        <span class="font-mono">GitHub</span>
+      </a>
+    </div>
+  </article>
+</BaseLayout>

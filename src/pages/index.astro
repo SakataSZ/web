@@ -12,21 +12,19 @@ const articles = (await getCollection("articles"))
 ---
 
 <BaseLayout title="Home">
-  <article>
-    <div class="px-5 py-10 max-w-2xl mx-auto">
-      <h1 class="font-h1-sp lg:font-h1-pc">🎉 Hello there</h1>
-      <p class="font-body-lg mb-6 font-mono">
-        I'm a software engineer specializing in building web applications and APIs(Rest, GraphQL).
-        My philosophy is to build simple, scalable, and maintainable software.
-      </p>
-      <p class="font-body-lg mb-6 font-mono">Btw, I use Arch Linux and Vim.</p>
-      <Button href="/about">More about me</Button>
+  <article class="px-5 py-10 max-w-2xl mx-auto">
+    <h1 class="font-h1-sp lg:font-h1-pc">🎉 Hello there</h1>
+    <p class="font-body-lg mb-6 font-mono">
+      I'm a software engineer specializing in building web applications and APIs(Rest, GraphQL). My
+      philosophy is to build simple, scalable, and maintainable software.
+    </p>
+    <p class="font-body-lg mb-6 font-mono">Btw, I use Arch Linux and Vim.</p>
+    <Button href="/about">More about me</Button>
 
-      <h2 class="font-h2-sp lg:font-h2-pc border-l-8 border-l-primary pl-4">Articles</h2>
-      <div class="grid gap-4 mb-6">
-        {articles.map((article) => <Card {...article} />)}
-      </div>
-      <Button href="/articles">More articles</Button>
+    <h2 class="font-h2-sp lg:font-h2-pc border-l-8 border-l-primary pl-4">Articles</h2>
+    <div class="grid gap-4 mb-6">
+      {articles.map((article) => <Card {...article} />)}
     </div>
+    <Button href="/articles">More articles</Button>
   </article>
 </BaseLayout>

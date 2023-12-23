@@ -1,0 +1,6 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>@media (prefers-color-scheme: dark) {path { fill: #cacaca; } }</style>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M20 20L11.7232 13.6165L20 7.49283L10 0L0 7.49283L8.27679 13.6165L0 20H3.40355L10 14.9169L16.5965 20H20ZM10 12.3086L16.5965 7.49283L10 2.60264L3.40355 7.49283L10 12.3086Z" fill="black"/>
+<path d="M10 10.5L14 7.49283L10 4.5L6 7.51972L10 10.5Z" fill="black"/>
+<path d="M6 20L10 16.5L14 20H6Z" fill="black"/>
+</svg>

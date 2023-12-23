@@ -1,18 +1,29 @@
 ---
 import BaseLayout from "~/layouts/BaseLayout.astro";
 import CheckIcon from "~/assets/icons/CheckIcon.astro";
+import { Image } from "astro:assets";
+import avatarImage from "~/assets/images/avatar.webp";
 ---
 
 <BaseLayout title="About me">
   <article class="px-5 py-10 max-w-2xl mx-auto w-full font-mono">
     <h1 class="font-h1-sp lg:font-h1-pc">🐶 About me</h1>
-    <p>Hey there! I'm Sakata, a software engineer based in Tokyo, Japan.</p>
-    <p>
-      I'm all about web development, especially on the backend. You'll usually find me using
-      TypeScript (Node.js), Python (FastAPI), and Rust (Rocket) to build APIs. I'm a big fan of the
-      KISS principle, so I like to keep things simple and effective. On the frontend side, I've
-      dabbled in React, Svelte, and Astro.
-    </p>
+    <div class="flex flex-col sm:flex-row sm:items-center gap-8">
+      <div class="avatar p-4">
+        <div class="w-24 h-24 rounded-xl">
+          <Image src={avatarImage} alt="avatar" />
+        </div>
+      </div>
+      <div>
+        <p>Hey there! I'm Sakata, a software engineer based in Tokyo, Japan.</p>
+        <p>
+          I'm all about web development, especially on the backend. You'll usually find me using
+          TypeScript (Node.js), Python (FastAPI), and Rust (Rocket) to build APIs. On the frontend
+          side, I've dabbled in React, Svelte, and Astro.
+        </p>
+        <p>My philosophy is the KISS principle, so I like to keep things simple and effective.</p>
+      </div>
+    </div>
     <h2 class="font-h2-sp lg:font-h2-pc">Skills</h2>
     <h3 class="font-h3-sp lg:font-h3-pc">Backend</h3>
     <ul class="list-disc list-inside">

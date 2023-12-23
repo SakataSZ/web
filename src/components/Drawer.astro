@@ -1,4 +1,5 @@
 ---
+import DrawerListItem from "~/components/DrawerListItem.astro";
 import HomeIcon from "~/assets/icons/HomeIcon.astro";
 import PersonIcon from "~/assets/icons/PersonIcon.astro";
 import NewsIcon from "~/assets/icons/NewsIcon.astro";
@@ -7,43 +8,35 @@ import GithubIcon from "~/assets/icons/GithubIcon.astro";
 import TwitterIcon from "~/assets/icons/TwitterIcon.astro";
 ---
 
-<aside id="drawer" class="fixed pt-16 bg-base-100 h-screen z-40 shadow-lg shadow-base-200">
+<aside id="drawer" class="fixed pt-16 bg-base-100 h-[100dvh] z-40 shadow-lg shadow-base-200">
   <div class="flex flex-col h-full pt-8">
     <nav>
       <ul>
-        <li>
-          <a href="/" class="btn btn-ghost w-full rounded-none justify-start">
-            <HomeIcon />
-            <p>Home</p>
-          </a>
-        </li>
-        <li>
-          <a href="/about" class="btn btn-ghost w-full rounded-none justify-start">
-            <PersonIcon />
-            <p>About</p>
-          </a>
-        </li>
-        <li>
-          <a href="/articles" class="btn btn-ghost w-full rounded-none justify-start">
-            <NewsIcon />
-            <p>Articles</p>
-          </a>
-        </li>
-        <li>
-          <a href="/contact" class="btn btn-ghost w-full rounded-none justify-start">
-            <MailIcon />
-            <p>Contact</p>
-          </a>
-        </li>
+        <DrawerListItem href="/">
+          <HomeIcon />
+           Home
+        </DrawerListItem>
+        <DrawerListItem href="/about">
+          <PersonIcon />
+           About
+        </DrawerListItem>
+        <DrawerListItem href="/articles">
+          <NewsIcon />
+           Articles
+        </DrawerListItem>
+        <DrawerListItem href="/contact">
+          <MailIcon />
+           Contact
+        </DrawerListItem>
       </ul>
     </nav>
     <div class="mt-auto flex border-t border-neutral h-16 items-center">
-      <a href="https://twitter.com/SakataSZ" aria-label="SakataSZ's GitHub" class="btn btn-ghost"
-        ><GithubIcon /></a
-      >
-      <a href="https://github.com/SakataSZ" aria-label="SakataSZ's Twitter" class="btn btn-ghost"
-        ><TwitterIcon /></a
-      >
+      <a href="https://twitter.com/SakataSZ" aria-label="SakataSZ's GitHub" class="btn btn-ghost">
+        <GithubIcon />
+      </a>
+      <a href="https://github.com/SakataSZ" aria-label="SakataSZ's Twitter" class="btn btn-ghost">
+        <TwitterIcon />
+      </a>
     </div>
   </div>
 </aside>

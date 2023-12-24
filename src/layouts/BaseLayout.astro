@@ -8,7 +8,6 @@ import Footer from "~/components/Footer.astro";
 import Drawer from "~/components/Drawer.astro";
 
 type Props = SEOProps;
-
 const defaultProps: Partial<Props> = {
   titleTemplate: "SakataSZ | %s",
   description: "This is SakataSZ's website for portfolio and blog.",
@@ -16,7 +15,7 @@ const defaultProps: Partial<Props> = {
     basic: {
       title: "SakataSZ Website",
       type: "website",
-      image: avatarImage.src,
+      image: Astro.url.href + avatarImage.src,
     },
     optional: {
       siteName: "SakataSZ Website",
@@ -27,7 +26,7 @@ const defaultProps: Partial<Props> = {
     card: "summary",
     site: "@sakatasz",
     title: "SakataSZ Website",
-    image: avatarImage.src,
+    image: Astro.url.href + avatarImage.src,
     imageAlt: "SakataSZ Website",
     description: "This is SakataSZ's website for portfolio and blog.",
   },

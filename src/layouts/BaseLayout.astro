@@ -15,7 +15,7 @@ const defaultProps: Partial<Props> = {
     basic: {
       title: "SakataSZ Website",
       type: "website",
-      image: Astro.url.href + avatarImage.src,
+      image: Astro.url.origin + avatarImage.src,
     },
     optional: {
       siteName: "SakataSZ Website",
@@ -26,7 +26,7 @@ const defaultProps: Partial<Props> = {
     card: "summary",
     site: "@sakatasz",
     title: "SakataSZ Website",
-    image: Astro.url.href + avatarImage.src,
+    image: Astro.url.origin + avatarImage.src,
     imageAlt: "SakataSZ Website",
     description: "This is SakataSZ's website for portfolio and blog.",
   },

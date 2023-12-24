@@ -3,6 +3,19 @@
 </div>
 
 <style>
+  :root {
+    --astro-code-color-text: theme("colors.base-content");
+    --astro-code-color-background: theme("colors.base-300");
+    --astro-code-token-constant: theme("colors.lavender");
+    --astro-code-token-string: theme("colors.green");
+    --astro-code-token-comment: theme("colors.neutral");
+    --astro-code-token-keyword: theme("colors.mauve");
+    --astro-code-token-parameter: theme("colors.pink");
+    --astro-code-token-function: theme("colors.sky");
+    --astro-code-token-string-expression: theme("colors.teal");
+    --astro-code-token-punctuation: theme("colors.lavender");
+    --astro-code-token-link: theme("colors.rosewater");
+  }
   div :global(h2) {
     @apply font-h2-sp lg:font-h2-pc;
   }
@@ -19,7 +32,7 @@
   }
 
   div :global(p) {
-    @apply mt-5 font-body-md;
+    @apply mt-5 font-body-lg;
   }
 
   div :global(ul) {
@@ -35,11 +48,20 @@
     @apply ml-5;
   }
 
+  div :global(.remark-code-title) {
+    @apply mt-6 rounded-t-lg border-b border-b-neutral bg-base-300 px-8 py-2 font-mono text-xs text-base-content;
+    @apply w-fit;
+  }
+
   div :global(pre) {
-    @apply mt-5 rounded-md p-4 text-xs;
+    @apply mt-6 rounded-lg p-4 text-xs;
+  }
+
+  div :global(.remark-code-title + pre) {
+    @apply mt-0 rounded-tl-none p-4 text-xs;
   }
 
   div :global(p img) {
-    @apply w-full;
+    @apply w-full rounded-lg shadow-md shadow-gray-900;
   }
 </style>

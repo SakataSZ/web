@@ -20,3 +20,20 @@ type DaisyUIPalette = {
   error?: string;
   "error-content"?: string;
 };
+
+type CatppuccinoPalette = {
+  "--rosewater": string;
+  "--flamingo": string;
+  "--pink": string;
+  "--mauve": string;
+  "--red": string;
+  "--maroon": string;
+  "--peach": string;
+  "--yellow": string;
+  "--green": string;
+  "--teal": string;
+  "--sky": string;
+  "--sapphire": string;
+  "--blue": string;
+  "--lavender": string;
+};

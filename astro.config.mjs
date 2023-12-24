@@ -1,6 +1,7 @@
 import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
+import remarkCodeTitle from "remark-code-titles";
 
 const env = process.env.NODE_ENV;
 const siteUrl = {
@@ -15,6 +16,7 @@ export default defineConfig({
   site: siteUrl[env],
   integrations: [tailwind(), sitemap()],
   markdown: {
-    shikiConfig: { theme: "rose-pine" },
+    remarkPlugins: [remarkCodeTitle],
+    shikiConfig: { theme: "css-variables" },
   },
 });

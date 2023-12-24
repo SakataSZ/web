@@ -1,10 +1,14 @@
 ---
 import MenuButton from "./MenuButton.astro";
 import Logo from "./Logo.astro";
+import ThemeDropdown from "./ThemeDropdown.astro";
 ---
 
-<header class="navbar fixed bg-base-100 shadow-md shadow-base-200 z-50 gap-2">
-  <MenuButton />
-  <Logo />
+<header class="navbar fixed bg-base-100 shadow-md shadow-base-200 z-50 gap-2 justify-between">
+  <div>
+    <MenuButton />
+    <Logo />
+  </div>
+  <ThemeDropdown />
 </header>
 <div class="navbar"></div>

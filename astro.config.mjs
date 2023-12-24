@@ -8,6 +8,7 @@ const siteUrl = {
   preview: "https://sakatasz-dev.vercel.app",
   production: "https://sakatasz.com",
 };
+console.log(`[astro.config] env: ${env}`);
 
 export default defineConfig({
   server: { host: "0.0.0.0" },

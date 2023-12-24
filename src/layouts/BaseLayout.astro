@@ -1,25 +1,48 @@
 ---
+import avatarImage from "~/assets/images/avatar.webp";
+import type { Props as SEOProps } from "astro-seo";
+import { SEO } from "astro-seo";
+
 import Header from "~/components/Header.astro";
 import Footer from "~/components/Footer.astro";
 import Drawer from "~/components/Drawer.astro";
 
-interface Props {
-  title: string;
-}
-
-const { title } = Astro.props;
+type Props = SEOProps;
+const defaultProps: Partial<Props> = {
+  titleTemplate: "SakataSZ | %s",
+  description: "This is SakataSZ's website for portfolio and blog.",
+  openGraph: {
+    basic: {
+      title: "SakataSZ Website",
+      type: "website",
+      image: Astro.url.origin + avatarImage.src,
+    },
+    optional: {
+      siteName: "SakataSZ Website",
+      description: "This is SakataSZ's website for portfolio and blog.",
+    },
+  },
+  twitter: {
+    card: "summary",
+    site: "@sakatasz",
+    title: "SakataSZ Website",
+    image: Astro.url.origin + avatarImage.src,
+    imageAlt: "SakataSZ Website",
+    description: "This is SakataSZ's website for portfolio and blog.",
+  },
+};
+const props = { ...Astro.props, ...defaultProps };
 ---
 
 <!doctype html>
 <html lang="ja">
   <head>
+    <SEO {...props} />
     <meta charset="UTF-8" />
-    <meta name="description" content="SakataSZ Develop" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title}</title>
     <script is:inline>
       const theme = localStorage.getItem("theme") || "default";
       document.documentElement.setAttribute("data-theme", theme);
@@ -30,13 +53,12 @@ const { title } = Astro.props;
     <Drawer />
     <main class="flex flex-col grow"><slot /></main>
     <Footer />
+    <style is:global>
+      html,
+      body {
+        font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
+          sans-serif;
+      }
+    </style>
   </body>
 </html>
-
-<style is:global>
-  html,
-  body {
-    font-family: "YuGothic", "Yu Gothic", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo,
-      sans-serif;
-  }
-</style>

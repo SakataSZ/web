@@ -64,4 +64,17 @@
   div :global(p img) {
     @apply w-full rounded-lg shadow-md shadow-gray-900;
   }
+
+  div :global(table) {
+    @apply mt-6 block w-fit max-w-full overflow-x-auto rounded-lg bg-base-300 py-2 font-body-md;
+  }
+  div :global(th, td) {
+    @apply whitespace-nowrap px-2 py-1;
+  }
+  div :global(th) {
+    @apply border-b border-b-neutral py-1 font-bold;
+  }
+  div :global(tbody tr:nth-child(odd)) {
+    @apply bg-base-200;
+  }
 </style>

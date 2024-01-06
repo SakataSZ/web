@@ -2,6 +2,17 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkCodeTitle from "remark-code-titles";
+import admonitions from "remark-github-beta-blockquote-admonitions";
+
+const remarkBlockQuote = [
+  admonitions,
+  {
+    classNameMaps: {
+      block: (title) => `admonition admonition-${title.toLowerCase()}`,
+      title: "admonition-title",
+    },
+  },
+];
 
 const env = process.env.NODE_ENV;
 const siteUrl = {
@@ -16,7 +27,7 @@ export default defineConfig({
   site: siteUrl[env],
   integrations: [tailwind(), sitemap()],
   markdown: {
-    remarkPlugins: [remarkCodeTitle],
+    remarkPlugins: [remarkCodeTitle, remarkBlockQuote],
     shikiConfig: { theme: "css-variables" },
   },
 });

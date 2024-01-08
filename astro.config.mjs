@@ -3,6 +3,8 @@ import tailwind from "@astrojs/tailwind";
 import sitemap from "@astrojs/sitemap";
 import remarkCodeTitle from "remark-code-titles";
 import admonitions from "remark-github-beta-blockquote-admonitions";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 const remarkBlockQuote = [
   admonitions,
@@ -27,7 +29,8 @@ export default defineConfig({
   site: siteUrl[env],
   integrations: [tailwind(), sitemap()],
   markdown: {
-    remarkPlugins: [remarkCodeTitle, remarkBlockQuote],
+    remarkPlugins: [remarkCodeTitle, remarkBlockQuote, remarkMath],
+    rehypePlugins: [rehypeKatex],
     shikiConfig: { theme: "css-variables" },
   },
 });

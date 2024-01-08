@@ -34,6 +34,9 @@
   div :global(p) {
     @apply mt-5 font-body-lg;
   }
+  div :global(a) {
+    @apply text-blue underline underline-offset-2;
+  }
 
   /* lists */
   div :global(ul) {
@@ -63,7 +66,7 @@
   }
 
   div :global(p img) {
-    @apply w-full rounded-lg shadow-md shadow-gray-900;
+    @apply w-full rounded-lg shadow-sm shadow-base-content;
   }
 
   /* tables */
@@ -116,5 +119,13 @@
   }
   div :global(.admonition-caution .admonition-title) {
     @apply font-bold text-red;
+  }
+
+  /* katex */
+  div :global(.katex-html) {
+    @apply font-body-lg;
+  }
+  div :global(.katex-display) {
+    @apply mt-6 max-w-full overflow-x-auto rounded-lg bg-base-200 px-4 py-4;
   }
 </style>

@@ -7,7 +7,7 @@ type TypographyProperties = {
   "font-family"?: string;
 };
 
-type Type = "title" | "body";
+type Type = "title" | "body" | "math";
 type size = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "xxl";
 type Device = "sp" | "pc";
 

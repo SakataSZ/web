@@ -141,10 +141,24 @@ const body: TypographyClassNames = {
   },
 };
 
+const math: TypographyClassNames = {
+  ".font-math-md": {
+    "font-size": "14px",
+    "font-weight": "500",
+    "line-height": "1.7",
+  },
+  ".font-math-sm": {
+    "font-size": "12px",
+    "font-weight": "500",
+    "line-height": "1.7",
+  },
+};
+
 const typographyClassNames: TypographyClassNames = {
   ...title,
   ...heading,
   ...body,
+  ...math,
 };
 
 export const typography = plugin((api) => {
